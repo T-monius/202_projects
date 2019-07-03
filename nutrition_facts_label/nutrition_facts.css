@@ -1,0 +1,203 @@
+html {
+  font-family: "Helvetica Black", sans-serif;
+  font-size: 28px;
+}
+
+/* Make the box the appropriate width and outline it */
+body {
+  border: 2px solid black;
+  width: 676px;
+}
+
+/* Space the header from the outer line and separate it from
+   following elements with a thick black line */
+header {
+  margin: 10px 15px 4px 15px;
+  padding: 0 0 5px 0;
+  border-bottom: 30px solid black;
+}
+
+/* Styling for the main heading */
+h1 {
+  font-family: "Franklin Gothic Heavy", Arial;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Remove extra vertical space between header description paragraphs */
+p {
+  margin: 0;
+}
+
+/* Space and position of the main section of the page */
+section {
+  margin: 10px 15px 4px 15px;
+  padding: 0;
+}
+
+/* Styling for the main secion's header 'Amount Per Serving' */
+h2 {
+  font-size: 1rem;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+/* Make description lists next to one another line up on the same
+   horizontal line */
+dl {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Make the description term, nutrient name, bold */
+dt {
+  font-weight: bold;
+}
+
+/* Make the description lists for nutrient names and quantities line
+   up horizontally */
+dt, dd {
+  display: inline-block;
+}
+
+/* Tighten up spacing between the description data and the term */
+dd {
+  margin: 0;
+}
+
+/* Make the description lists following the header able to line up next
+   two its sibling by makig it only take up half the horizontal space.
+   Adjust it's position */
+h2 + dl,
+dl:first-of-type + dl {
+  width: 50%;
+  padding: 5px 0 5px 0;
+  border-bottom: 15px solid black;  
+}
+
+/* Put the text in the second description list opposite that of the first */
+dl:first-of-type + dl {
+  text-align: right;
+}
+
+/* Remove bold for the second description list term below the section header */
+dl + dl dt {
+  font-weight: normal;
+}
+
+/* Spacing for both tables */
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Create a line under the table headings of both tables. Vertical spacing */
+th {
+  padding-top: 11px;
+  border-bottom: 1px solid black;
+}
+
+/* Place the '% Daily Value´ heading over the second table column */
+[colspan="2"] {
+  text-align: right;
+  padding-right: 0;
+}
+
+sup {
+  vertical-align: 3px;
+}
+
+/* Make the table as wide as the nutrition label permits*/
+tr {
+  width: 100%;
+}
+
+tr:first-of-type td {
+  padding-top: 2px;
+}
+
+
+/* Create an extra large line after the last nutrient name and quantity
+   description list */
+tr:nth-of-type(9) {
+  border-bottom: 20px solid black;
+}
+
+/* Make description lists in a table block elements so that the box can
+   be aligned with auto margins */
+table dl {
+  display: block;
+}
+
+td {
+  padding: 0;
+}
+
+/* Create a line beneath all rows of the first table */
+table:first-of-type td {
+  border-bottom: 1px solid black;
+}
+
+/* Create lines between the rows that are not offset hopting to draw a
+shorter line for the offset rows with their description list boxes.
+td:not(.offset) {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1px;
+  border-bottom: 1px solid black;
+  outline: 1px solid red;
+}*/
+
+/* Embolden the percent daily value column of first table */
+table:first-of-type td:last-of-type {
+  text-align: right;
+  font-weight: bold;
+  /*outline: 1px solid red;*/
+}
+
+/*Remove bold from the '% Daily Value' column for the last four rows*/
+tr:last-of-type > td:last-of-type,
+tr:nth-last-of-type(2) > td:last-of-type,
+tr:nth-last-of-type(3) > td:last-of-type,
+tr:nth-last-of-type(4) > td:last-of-type {
+  font-weight: normal;
+}
+
+/* Remove bold font from data list terms for offset rows */
+td.offset > dl > dt {
+  font-weight: normal;
+}
+
+/* Offset the description lists for given rows */
+.offset {
+  display: block;
+  width: 90%;
+  font-weight: normal;
+  margin: 0 0 0 auto;
+}
+
+/* Put the table caption below the table body */
+caption {
+  caption-side: bottom;
+  text-align: left;
+}
+
+/* Font size for the second table */
+table:last-of-type {
+  font-size: .80rem;
+  text-align: left;
+}
+
+/* Remove bold for the second table headers */
+table:last-of-type th {
+  font-weight: normal;
+}
+
+/* Remove the line beneath row headers (second table) */
+[scope="row"] {
+  border-bottom: none;
+}
