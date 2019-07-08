@@ -8,39 +8,47 @@
   <body>
     <form method="post" action="#">
       <fieldset>
-        <dl>
+        <dl class="partial one-half left">
           <dt>
             <label for="first_name">First Name</label>
           </dt>
           <dd>
             <input type="text" name="first_name" id="first_name">
           </dd>
+        </dl><!--
 
+        --><dl class="partial one-half right">
           <dt>
             <label for="last_name">Last Name</label>
           </dt>
           <dd>
             <input type="text" name="last_name" id="last_name">
           </dd>
+        </dl>
 
+        <dl>
           <dt>
             <label for="email">E-mail Address</label>
           </dt>
           <dd>
             <input type="email" name="email" id="email" placeholder="john@smith.com">
           </dd>
+        </dl>
 
-          <dt class="city-state-zip">
+        <dl class="partial one-half left">
+          <dt>
             <label for="city">City</label>
           </dt>
-          <dd class="city-state-zip">
+          <dd>
             <input type="text" name="city" id="city">
           </dd>
+        </dl><!--
 
-          <dt class="city-state-zip">
+        --><dl class="partial one-tenth both">
+          <dt>
             <label for="state">State</label>
           </dt>
-          <dd class="city-state-zip">
+          <dd>
             <select id="state" name="state">
               <option>AK</option>
               <option>AL</option>
@@ -95,11 +103,13 @@
               <option>WY</option>
             </select>
           </dd>
+        </dl><!--
 
-          <dt class="city-state-zip">
+        --><dl class="partial four-tenths right">
+          <dt>
             <label for="zip_code">Zip Code</label>
           </dt>
-          <dd class="city-state-zip">
+          <dd>
             <input type="text" name="zip_code" id="zip_code" pattern="[0-9]{5}" placeholder="#####">
           </dd>
         </dl>
