@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Size of the outer box and drawing a border */
+main {
+  color: #545459;
+  width: 1000px;
+  margin-left: 30px;
+  border: 2px solid #999;
+}
+
+/* Create some space between the outer border and inside sections */
+section {
+  margin: 40px 20px;
+}
+
+/* Color the headings red */
+h1, h2, h3 {
+  color: red;
+}
+
+/* Font size and position of secondary headings */
+h2 {
+  font-size: 1.25rem;
+  /*padding: 10px 0;*/
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+/* Space the paragraphs a bit vertically */
+section p {
+  line-height: 2;
+}
+
+/* Kill default styling for hyperlinks */
+section a,
+section a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+/* Draw a dashed border around exapmple navigation boxes of first section */
+section:first-of-type div {
+  width: 650px;
+  border: 2px dashed black;
+  margin: 45px 45px;
+}
+
+/* Add margins to all `nav` elements in the first section */
+section:first-of-type nav {
+  margin: 30px;
+}
+
+/* Add margins to the second `nav` element in the 'Inline Elements' section */
+.inline-margin a {
+  margin: 30px;
+}
+
+/* Style the third `nav` box with a green background */
+section:first-of-type .inline-padding a {
+  color: #fff;
+  background-color: green;
+  padding: 30px 25px;
+}
+
+/* Make the nav box with floats contain it's children */
+section:first-of-type div:nth-of-type(4) {
+  overflow: auto;
+}
+
+/* Float the last `nav` in the first section 'Inline Elements' */
+section:first-of-type div:nth-of-type(4) nav {
+  float: left;
+}
+
+/* Style the last `nav` box in the first section */
+section:first-of-type .inline-float a {
+  background-color: green;
+  border: 3px solid darkgreen;
+  color: white;
+  float: left;
+  margin: 15px;
+  padding: 25px;
+  text-align: center;
+}
+
+/**** BLOCK ****/
+/* Style the first `div` in the second section 'Block Elements' */
+section:nth-of-type(2) div:first-of-type {
+  background-color: blue;
+  color: white;
+}
+
+/* Style the second `div` in the second section 'Block Elements' */
+section:nth-of-type(2) div:nth-of-type(2) {
+  background-color: green;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Style the third `div` in the second section 'Block Elements' with red */
+section:nth-of-type(2) div:nth-of-type(3) {
+  background-color: red;
+  color: white;
+  width: 90px;
+}
+
+/* Style the fourth `div` in the second section 'Block Elements' with pink */
+section:nth-of-type(2) div:nth-of-type(4) {
+  background-color: pink;
+  color: white;
+  width: 180px;
+  height: 120px;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Float some block boxes left */
+.fl-left {
+  float: left;
+}
+
+/* Float some block boxes right */
+.fl-right {
+  float: right;
+}
+
+/* Make the container for floats contain its children */
+.float-container {
+  overflow: hidden;
+}
+
+.white-on-red {
+  background-color: red;
+  color: white;
+}
+
+.white-on-blue {
+  background-color: blue;
+  color: white;
+}
+
+.width-40 {
+  text-align: center;
+  width: 40%;
+  padding: 30px 0;
+}
+
+.width-50 {
+  text-align: center;
+  width: 50%;
+  padding: 30px 0;
+}
+
+/* Create a vertical `nav` menu in the 'Floating-Block Elements' section */
+section:nth-of-type(3) .block-anchors a {
+  display: block;
+  width: 95%;
+  margin: 10px auto;
+  color: white;
+  background-color: dodgerblue;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/**** Inline-Block ****/
+/* The fourth section; horizontal navigation bar with `inline-block` */
+section:nth-of-type(4) nav {
+  display: block;
+  background-color: white;
+  margin: 40px auto;
+  width: 80%;
+}
+
+section:nth-of-type(4) nav a {
+  display: inline-block;
+  color: white;
+  background-color: dodgerblue;
+  text-align: center;
+  padding: 20px 0;
+  width: 23.5%;
+}
+
+section:nth-of-type(4) nav .gap {
+  display: inline-block;
+  background-color: white;
+  width: 2%;
+}
+
+/**** Floats and Positioning Elements****/
+/* Dashed border above the section and centering the header */
+section:nth-of-type(5) h1:first-of-type {
+  border-top: 2px dashed #545459;
+  padding-top: 30px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* Style the 'Box 1' */
+section:nth-of-type(5) div {
+  overflow: auto;
+}
+
+section:nth-of-type(5) div > div:first-of-type {
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 40px 0;
+  width: 50%;
+}
+
+/* Style the 'Box 2' */
+section:nth-of-type(5) div > div:nth-of-type(2) {
+  background-color: dodgerblue;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 40px 0;
+  width: 50%;
+}
+
+/* Style the 'Box 3' */
+section:nth-of-type(5) div > div:nth-of-type(3) {
+  background-color: seagreen;
+  color: white;
+  clear: both;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0;
+  width: 100%;
+}
+
+/* Style the unordered list of positioning types */
+section:nth-of-type(5) ul {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  line-height: 2;
+}
+
+/* Style the blue box with fixed positioning */
+#fixed {
+  position: fixed;
+  bottom: 50px;
+  left: 35px;
+  text-align: center;
+  background-color: dodgerblue;
+  color: white;
+  padding: 25px 35px;
+  border-radius: 10px;
+  width: 225px;
+}
+
+/* Style the red box at the bottom of the page */
+#relative {
+  width: 325px;
+  position: relative;
+  text-align: center;
+  bottom: -45px;
+  right: 90px;
+  margin-bottom: 30px;
+  background-color: tomato;
+  color: white;
+  border-radius: 10px;
+  padding: 15px 35px;
+}
+
+/* Make the last paragraph visible when the blue box scrolls over it */
+.opaque {
+  opacity: .8;
+}
+
+#absolute {
+  position: absolute;
+  text-align: center;
+  color: white;
+  background-color: green;
+  padding: 25px 25px;
+  border-radius: 10px;
+  bottom: -4295px;
+  left: 260px;
+  width: 200px;
+}
